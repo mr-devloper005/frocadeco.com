@@ -127,24 +127,6 @@ export default function ContactPage() {
               <textarea className="min-h-[180px] rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm" placeholder="Share the full context so we can respond with the right next step." />
               <button type="submit" className={`inline-flex h-12 items-center justify-center rounded-full px-6 text-sm font-semibold ${tone.action}`}>Send message</button>
             </form>
-            <div className={`mt-6 rounded-[1.6rem] p-5 ${tone.soft}`}>
-              <div className="flex flex-wrap items-center justify-between gap-4">
-                <div>
-                  <p className="text-sm font-semibold">Prefer email?</p>
-                  <p className={`mt-1 text-sm leading-7 ${tone.muted}`}>Reach the team directly through the mailbox managed from your environment settings.</p>
-                </div>
-                <a
-                  href={`mailto:${contactEmail}`}
-                  className={`inline-flex h-11 items-center justify-center rounded-full px-5 text-sm font-semibold ${tone.action}`}
-                >
-                  Email us
-                </a>
-              </div>
-              <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm font-medium text-slate-700">
-                <Mail className="h-4 w-4" />
-                {contactEmailLabel}
-              </div>
-            </div>
           </div>
         </section>
       </main>

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { FileText, Building2, LayoutGrid, Tag, Github, Twitter, Linkedin, Image as ImageIcon, User, ArrowRight, Sparkles } from 'lucide-react'
+import { FileText, Building2, LayoutGrid, Tag, Image as ImageIcon, User, ArrowRight, Sparkles } from 'lucide-react'
 import { SITE_CONFIG, type TaskKey } from '@/lib/site-config'
 import { siteContent } from '@/config/site.content'
 import { getFactoryState } from '@/design/factory/get-factory-state'
@@ -33,9 +33,6 @@ const footerLinks = {
   ],
   resources: [
     { name: 'Help Center', href: '/help' },
-    { name: 'Community', href: '/community' },
-    { name: 'Developers', href: '/developers' },
-    { name: 'Status', href: '/status' },
     { name: 'Contact', href: '/contact' },
   ],
   legal: [
@@ -45,12 +42,6 @@ const footerLinks = {
     { name: 'Licenses', href: '/licenses' },
   ],
 }
-
-const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com', icon: Twitter },
-  { name: 'GitHub', href: 'https://github.com', icon: Github },
-  { name: 'LinkedIn', href: 'https://linkedin.com', icon: Linkedin },
-]
 
 export function Footer() {
   if (FOOTER_OVERRIDE_ENABLED) {
@@ -127,19 +118,6 @@ export function Footer() {
                     <li key={item.name}><Link href={item.href} className="hover:text-slate-950">{item.name}</Link></li>
                   ))}
                 </ul>
-              </div>
-              <div>
-                <h3 className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Connect</h3>
-                <div className="mt-4 flex gap-3">
-                  {socialLinks.map((item) => (
-                    <Link key={item.name} href={item.href} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/70 bg-white/82 p-2.5 text-slate-600 shadow-[0_10px_24px_rgba(209,173,230,0.1)] hover:bg-white hover:text-slate-950">
-                      <item.icon className="h-4 w-4" />
-                    </Link>
-                  ))}
-                </div>
-                <p className="mt-4 text-sm leading-7 text-slate-500">
-                  The footer now stays focused on the gallery experience while support pages remain easy to reach.
-                </p>
               </div>
             </div>
           </div>
